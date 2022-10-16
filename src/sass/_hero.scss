@@ -9,10 +9,15 @@ header {
  justify-content: space-between;
  display: flex;
  align-items: center;
- background-color: yellow;
+ 
 }
 
-
+.nav 
+{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
 .nav__list
 {
  display: flex;
@@ -20,17 +25,15 @@ header {
  align-items: center;
  gap: 30px;
  text-transform: uppercase;
+ font-size: 20;
+ color: #FFFFFF;
+ }
 
-}
+
 .hero {
+height: 800px;
 display: flex;
 padding-top: 200px;
-background-color: yellow;
-// background-image: url('../images/Hero_bg.jpg');
-background-repeat: no-repeat;
-background-size: contain;
-background-position: bottom;
-
 }
 
 .hero__title {
@@ -38,16 +41,42 @@ background-position: bottom;
  justify-content: left;
  align-items: center;
  gap: 30px;
+ height: 156px;
+ left: 0%;
+ right: 0.45%;
+ top: 97.86px;
+ 
+ font-family: 'Cormorant Garamond';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 65px;
+ line-height: 78px;
+ /* or 120% */
+ letter-spacing: 0.4px;
+  color: #FFFFFF;
 
 }
+
 .hero__info {
  display: flex;
  width: 500px;
- height: 100px;
- padding: 20px 0;
- margin-top: 60px;
- background-color: red;
+ height: 150px;
+ padding: 130px 0;
+ position: absolute;
+ left: 10%;
+ font-family: 'Outfit';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 22px;
+ line-height: 40px;
+  /* or 180% */
+ letter-spacing: 0.4px;
+ color: #D1B06B;
+}
 
+.hero__img {
+ position: absolute;
+ 
 }
 
 

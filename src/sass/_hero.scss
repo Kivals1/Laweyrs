@@ -16,39 +16,83 @@ header {
 {
  display: flex;
  align-items: center;
- justify-content: space-between;
+ 
 }
-.nav__list
-{
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 30px;
- text-transform: uppercase;
- font-size: 20;
- color: #FFFFFF;
- }
+.nav ol{
+display: flex;
+list-style: none;
+}
 
+.btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  display: none;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Outfit';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 35px;
+    /* identical to box height, or 160% */
+  letter-spacing: 0.4px;
+}
+.nav ol li {margin: lem;}
+.nav ol li a{
+  text-decoration: none;
+  padding: 0.2em 1.2em 0.9em 1.2em;
+  border-radius: 10px 10px 0 0;
+  color: #D1B06B;
+  transition: all .4s;
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+} 
+.nav ol li a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 41px; 
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  transform-origin: bottom;
+  background: linear-gradient(to right, #D1B06B, #8e6a1d, #513803);
+  transform: scaleY(0.05);
+  z-index: -1; 
+  transition: all .4s;
+}
+.nav ol li a:hover::before {
+  transform: scaleY(1.1);
+}
+.nav ol li a:hover {
+  color: white;
+}
 
 .hero {
-height: 800px;
+height: 600px;
 display: flex;
-padding-top: 200px;
+padding-top: 250px;
 }
 
 .hero__title {
  display: flex;
  justify-content: left;
  align-items: center;
- gap: 30px;
- height: 156px;
- left: 0%;
+ height: 56px;
+ left: 10%;
  right: 0.45%;
- top: 97.86px;
- 
+ top: 100px;
  font-family: 'Cormorant Garamond';
  font-style: normal;
- font-weight: 400;
  font-size: 65px;
  line-height: 78px;
  /* or 120% */
@@ -61,22 +105,52 @@ padding-top: 200px;
  display: flex;
  width: 500px;
  height: 150px;
- padding: 130px 0;
+ padding: 100px 0;
  position: absolute;
  left: 10%;
- font-family: 'Outfit';
+ font-family: 'Cormorant Garamond';
  font-style: normal;
  font-weight: 400;
- font-size: 22px;
- line-height: 40px;
+ font-size: 16px;
+ line-height: 20px;
   /* or 180% */
- letter-spacing: 0.4px;
+ letter-spacing: 1px;
  color: #D1B06B;
 }
 
 .hero__img {
- position: absolute;
- 
+position: absolute;
+background-image: url(../images/ts2.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: bottom;
+height: 630px;
+left: 52%;
+right: 0%;
+top: 100px;
+
 }
 
+.button {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 180% */
+  letter-spacing: 1px;
+  background-color:  #D1B06B;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 20px;
+  height: 30px;
+  width: 130px;
+  border: none;
+  
+  &:hover,
+  &:focus {
+    color: #D1B06B;
+    background-color: transparent;
+  }
+}
 

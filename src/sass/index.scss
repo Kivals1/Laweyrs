@@ -1,7 +1,9 @@
-@import './common';
-@import './hero';
+@import './base/common';
+@import './components/hero';
+@import './components/mobile-menu';
 @import './utils/global-styles';
 @import './utils/mixins';
 @import './utils/visually-hidden';
+@import './utils/variables';
 
 

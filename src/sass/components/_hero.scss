@@ -6,11 +6,87 @@ header {
 }
 
 .header__container {
+
+    
  justify-content: space-between;
  display: flex;
  align-items: center;
- 
+
 }
+.burger-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 16px;
+  font-size: 0;
+  z-index: 40;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  content: '';
+  background-color: yellowgreen;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  // transition: $animationTransition;
+}
+
+.burger-menu::before {
+  top: 0px;
+}
+
+.burger-menu::after {
+  bottom: 0;
+}
+
+.burger-menu .burger-menu__item {
+  background-color: yellow;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: 40%;
+}
+
+.burger-menu.is-open::before {
+  background-color: yellow;
+  transform: rotate(-45deg);
+  top: 8px;
+  // transition: $animationTransition;
+}
+
+.burger-menu.is-open::after {
+  background-color: yellow;
+  transform: rotate(45deg);
+  bottom: 5px;
+}
+
+.burger-menu.is-open .burger-menu__item {
+  transform: scale(0);
+}
+
+@media (min-width: 200px) {
+  .burger-menu {
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1200px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
 
 @media screen and (min-width: 1200px) {
 .nav 
@@ -145,26 +221,36 @@ top: 250px;
 
 }
 
+
 .button {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  /* or 180% */
-  letter-spacing: 1px;
-  background-color:  #D1B06B;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  border-radius: 20px;
-  height: 30px;
-  width: 130px;
-  border: none;
+  @media screen and (min-width: 320px) {
+  display: none;}}
+
+
+  .button{ 
+  @media screen and (min-width: 768px) {
+    display: inline;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    background-color: #D1B06B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: 20px;
+    height: 30px;
+    width: 130px;
+    border: none;
   
-  &:hover,
-  &:focus {
-    color: #D1B06B;
-    background-color: transparent;
+    &:hover,
+    &:focus {
+      color: #D1B06B;
+      background-color: transparent;
+    }
   }
 }
+  
+  
 

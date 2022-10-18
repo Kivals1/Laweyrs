@@ -12,38 +12,19 @@ header {
  
 }
 
+@media screen and (min-width: 1200px) {
 .nav 
 {
+  
  display: flex;
  align-items: center;
- 
+ padding-left: 16px;
 }
 .nav ol{
 display: flex;
 list-style: none;
 }
 
-.btn {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: none;
-}
-.btn::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: 'Outfit';
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 35px;
-    /* identical to box height, or 160% */
-  letter-spacing: 0.4px;
-}
 .nav ol li {margin: lem;}
 .nav ol li a{
   text-decoration: none;
@@ -65,49 +46,64 @@ list-style: none;
   border-radius: 10px 10px 0 0;
   background: transparent;
   transform-origin: bottom;
-  background: linear-gradient(to right, #D1B06B, #8e6a1d, #513803);
+  background: linear-gradient( #cab892, #c7b285, #D1B06B);
   transform: scaleY(0.05);
   z-index: -1; 
   transition: all .4s;
+
 }
 .nav ol li a:hover::before {
   transform: scaleY(1.1);
+  
 }
 .nav ol li a:hover {
   color: white;
+  
+
+}
 }
 
 .hero {
-height: 600px;
-display: flex;
-padding-top: 250px;
+  height: 600px;
+  padding-top: 140px;
+  padding-left: 16px;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 30px;
+    display: flex;
+  }
 }
 
 .hero__title {
- display: flex;
- justify-content: left;
- align-items: center;
- height: 56px;
- left: 10%;
+ padding: 40px 30px;
  right: 0.45%;
- top: 100px;
+ margin-top: 0;
  font-family: 'Cormorant Garamond';
  font-style: normal;
- font-size: 65px;
- line-height: 78px;
+ font-size: 32px;
+ line-height: 34px;
  /* or 120% */
- letter-spacing: 0.4px;
+ 
   color: #FFFFFF;
+  text-shadow: 0px 1px 1px #D1B06B;
+
+  @media screen and (min-width: 1200px)
+   {display: flex;
+    justify-content: left;
+    align-items: center;
+      font-size: 65px;
+      line-height: 78px;
+      letter-spacing: 0.4px;
+    }
 
 }
 
 .hero__info {
  display: flex;
- width: 500px;
- height: 150px;
- padding: 100px 0;
+ width: px;
+ padding: 40px 30px;
  position: absolute;
- left: 10%;
+ left: auto;
  font-family: 'Cormorant Garamond';
  font-style: normal;
  font-weight: 400;
@@ -116,6 +112,13 @@ padding-top: 250px;
   /* or 180% */
  letter-spacing: 1px;
  color: #D1B06B;
+
+ @media screen and (min-width: 1200px) {
+    width: 500px;
+    height: 150px;
+    padding-top: 180px;
+    padding: 100px;
+  }
 }
 
 .hero__img {
@@ -124,10 +127,21 @@ background-image: url(../images/ts2.png);
 background-repeat: no-repeat;
 background-size: contain;
 background-position: bottom;
-height: 630px;
-left: 52%;
-right: 0%;
-top: 100px;
+height: 350px;
+left: 40px;
+right: -460px;
+top: 250px;
+
+
+@media screen and (min-width: 1200px) {
+   
+    padding-left: 100px;
+    height: 630px;
+    left: 52%;
+    right: 0%;
+    padding-bottom: 0;
+    top: 0%;
+  }
 
 }
 

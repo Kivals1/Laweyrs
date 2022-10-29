@@ -1,12 +1,12 @@
 <header class="container header__container" id="#Головна">
  <div>
-  <div class="nav">
-   <ol class="nav__list">
-    <li class="nav__item"><a href="#Головна">Головна</a></li>
-    <li class="nav__item"><a href="#Про нас">Про нас</a></li>
-    <li class="nav__item"><a href="#Послуги">Послуги</a></li>
-    <li class="nav__item"><a href="#Команда">Команда</a></li>
-    <li class="nav__item"><a href="#Контакти">Контакти</a></li> 
+  <div class="nav" id="nav" data-menu>
+   <ol class="nav__list navigation--margin-left">
+    <li class="nav__item"><a class="nav-menu__link nav-menu__link--active" href="#Головна">Головна</a></li>
+    <li class="nav__item"><a class="nav-menu__link nav-menu__link--active" href="#Про нас">Про нас</a></li>
+    <li class="nav__item"><a class="nav-menu__link nav-menu__link--active" href="#Послуги">Послуги</a></li>
+    <li class="nav__item"><a class="nav-menu__link nav-menu__link--active" href="#Команда">Команда</a></li>
+    <li class="nav__item"><a class="nav-menu__link nav-menu__link--active" href="#Контакти">Контакти</a></li> 
    </ol>
   </div>
   <div class="nav__contact">
@@ -23,11 +23,12 @@
     </span>
    </button>
   </div>
-<div class="burger-wrapper">
-      <button class="burger-menu">
-            <span class="burger-menu__item">burger-menu</span>
-      </button>
-</div>
+<button class="mobile-btn" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="mobile-btn__icon-menu" href="./images/icons.svg#icon-menu"></use>
+            <use class="mobile-btn__icon-close" href="./images/icons.svg#icon-menu-close"></use>
+      </svg>
+</button>
 </div>
 </header>
 
